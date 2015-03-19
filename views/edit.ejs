@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+
+<h3>Edit Student</h3>
+
+<form action="/update/<%= key %>" method="POST">
+   <p>
+      <label for="stuname">Edit student:</label>
+      <input type="text" name="stuname" value="<%=student%>" autofocus required>
+      <input type="submit" value="submit">
+   </p>
+</form>
+
+
+<form action="/remove/<%= key %>?_method=DELETE" method="POST">
+<p><input type="submit" value="Delete"></p>
+</form>
+
+
+
+
+   
+</body>
+</html>
+

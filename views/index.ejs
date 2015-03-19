@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   
+</head>
+<body>
+   
+
+<h3>List of Students</h3>
+
+<% for (var key in students){ %>
+   <% if(students.hasOwnProperty(key)){ %>
+      <li> 
+         <form action="/edit/<%= key %>" method="POST" >
+            <%= students[key] %> 
+            <input type="submit" value="Edit">
+         </form>   
+      </li>
+   <% } %>
+<% } %>
+
+
+
+
+<form action="/create" method="POST">
+   <p>
+      <label for="stuname">Add new student:</label>
+      <input type="text" name="stuname" autofocus required>
+      <input type="submit" value="submit">
+   </p>
+   
+</form>
+
+
+</body>
+</html>
